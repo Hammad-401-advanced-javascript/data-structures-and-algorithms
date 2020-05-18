@@ -1,13 +1,19 @@
-# data-structures-and-algorithms
-Code challenges 401
+# data-structures-and-algorithms 
 
-# Reverse an Array
-This challenge is about reversing any array, whatever the tall of it, and without using built-in functions.
+
+## 401 challenges 
+
+# Insert and shift an array in middle at index
+
 ## Challenge
-Using the recharging callbacks.
-
+  a function that takes an array and a number  
+  and return an array with the new value(the number) added at the middle index.
 ## Approach & Efficiency
-Learn how to reverse an array in different ways.
+- I used for loop 
+- if statment
+- Math method
+- O(n) "n is the length of the array"
 
-## Solution
-![UML Diagram](/assets/array-reverse.jpg)
+## Solutiol
+![Uml](/assets/array-shift.js)
+
