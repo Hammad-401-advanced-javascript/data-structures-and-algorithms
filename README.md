@@ -15,4 +15,5 @@
 - O(n) "n is the length of the array"
 
 ## Solutiol
-![Uml](array-shift.js)
+![Uml](/assets/array-shift.js)
+
