@@ -23,5 +23,5 @@ function insertShiftArray(arr,val){
 }
 
 
-   
+module.exports=insertShiftArray;
     
