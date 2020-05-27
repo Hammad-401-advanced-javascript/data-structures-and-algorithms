@@ -14,3 +14,6 @@
 * if statment 
 * while loop
 * O(n)
+
+
+<!-- solve the conflict -->
