@@ -13,4 +13,9 @@
 * class
 * if statment 
 * while loop
-* O(n)
+* Big(O): time O(1)
+ includes and toString O(1)
+
+ space insert O(n),includes and toString O(1)
+
+ ![image](./assest/whitebored-linkedlist.jpg)
