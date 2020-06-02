@@ -129,6 +129,30 @@ class linkedList{
     return 'empty';
   }
 
+  kthFromTheEnd(k) {
+
+    if (k <= 0) {
+      return 'less than 0 will rejected';
+    }
+    let currentNode = this.head;
+    let score = 0;
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+      score++;
+    }
+    let target = score - k;
+    let counter = 0;
+    let currentVal = this.head;
+    while (currentVal.next) {
+      currentVal = currentVal.next;
+      counter++;
+      if (counter === target) {
+        return currentVal.name;
+      }
+    }
+    return 'Exception';
+  }
+
 }
 
 
