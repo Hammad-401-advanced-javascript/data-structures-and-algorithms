@@ -16,8 +16,17 @@
 * class
 * if statment 
 * while loop
-* Big(O): time O(1)
- insertAfter and insertBefore O(n)
+* Big(O): 
+* Big O :
+    * append method
+       space --> O(1)
+       time --> O(n)
+    * insertBefore method
+       space --> O(1)
+       time --> O(n)
+    * insertAfter method
+       space --> O(1)
+        time --> O(n)
 
  space insertAfter and insertBefore O(n)
 
