@@ -17,4 +17,4 @@
 ## Solution
 ### UML
 
-!(image)[]
+![image](../assets/tree.jpg)
