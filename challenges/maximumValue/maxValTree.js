@@ -1,11 +1,10 @@
-
 'use strict';
 
 class Node {
-  constructor(data, left = null, right = null) {
-    this.data = data;
-    this.left = left;
-    this.right = right;
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
   }
 }
 
@@ -14,59 +13,25 @@ class BinaryTree {
     this.root = null;
   }
 
+  findMaximumValue(root = this.root) {
 
+    if (!root) return;
 
-  preOrder() {
-    if (this.root === null) return null;
-    const nodeList = [];
-    const traverse = function (current) {
-      nodeList.push(current.data);
-      if (current.left) traverse(current.left);
-      if (current.right) traverse(current.right);
-    };
+    let rootMax = root.val;
+    let lMax;
+    let rMax;
 
-    traverse(this.root);
-    return nodeList;
-  }
-
-
-  inOrder() {
-    if (this.root === null) return null;
-    const nodeList = [];
-
-    const traverse = function (current) {
-      if (current.left) traverse(current.left);
-      nodeList.push(current.data);
-      if (current.right) traverse(current.right);
-    };
-
-    traverse(this.root);
-    return (nodeList);
-  }
-
-
-  postOrder() {
-    if (this.root === null) return null;
-    const nodeList = [];
-    const traverse = function (current) {
-      if (current.left) traverse(current.left);
-      if (current.right) traverse(current.right);
-      nodeList.push(current.data);
-    };
-
-    traverse(this.root);
-    return (nodeList);
-  }
-
-
-  findMax() {
-    if (this.root === null) return null;
-    let current = this.root;
-    if (!current) return null;
-    while (current.right) {
-      current = current.right;
+    if (root.left) {
+      lMax = this.findMaximumValue(root.left);
     }
-    return current.data;
-  }
+    if (root.right) {
+      rMax = this.findMaximumValue(root.right);
+    }
 
+    let max = rootMax;
+    if (lMax > max) max = lMax;
+    if (rMax > max) max = rMax;
+
+    return max;
+  }
 }
