@@ -1,28 +1,24 @@
 'use strict';
 
-function FizzBuzzTree(tree){
+function FizzBuzzTree(tree) {
 
-  let traverse =(node)=>{
-    if (node.value % 3 === 0 && node.value % 5 ===0){
-      node.value='fizzBuzz';
-    }
-    else if(node.value %3 ===0){
-      node.value='fizz';
-    }
-    else if(node.value % 5 ===0){
-      node.value='buzz';
-    }
-    else{
-      node.value=`${node.value}`;
-    }
-  };
+  if (tree.root == null) {
+    return 'Empty tree';
+  }
 
-  let check=(node)=>{
-    if(node.left) check(node.left);
-    if(node.right) check(node.right);
-    traverse(node);
-  };
-  traverse(tree.root);
+
+  function travers(node) {
+    if (typeof node.value === 'number') {
+      if (node.value % 3 == 0 && node.value % 5 == 0) node.value = 'FizzBuzz';
+      else if (node.value % 3 == 0) node.value = 'Fizz';
+      else if (node.value % 5 == 0) node.value = 'Buzz';
+      else node.value = node.value.toString();
+    }
+    if (node.left) travers(node.left);
+    if (node.right) travers(node.right);
+  }
+  travers(tree.root);
+  return tree;
 }
 
-module.exports=FizzBuzzTree;
+module.exports = FizzBuzzTree;
