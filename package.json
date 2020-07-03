@@ -8,12 +8,12 @@
     "lint": "^0.7.0"
   },
   "devDependencies": {
-    "eslint": "^7.3.1",
+    "eslint": "^7.4.0",
     "jest": "^26.0.1"
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint '**/*.js'"
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "repository": {
     "type": "git",
