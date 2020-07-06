@@ -20,4 +20,4 @@ Big O (for time nad space ): is O(n)
 
 ### solution
 
-![image]()
+![image](../assets/reapet-word.jpg)
